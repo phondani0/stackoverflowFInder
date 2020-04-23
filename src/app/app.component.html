@@ -1,0 +1,11 @@
+<header class="text-center my-4">
+  <h3>Stack Overflow Finder</h3>
+</header>
+
+<section class="container">
+
+  <app-search #search (search)="searchHandler($event)"></app-search>
+
+  <app-search-result [searchResult]="searchResult"></app-search-result>
+
+</section>

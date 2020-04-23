@@ -1,0 +1,146 @@
+<div>
+  <form autocomplete="off">
+    <div class="form-row">
+      <div class="col-10">
+        <input class="form-control" type="text" name="question_body" [(ngModel)]="searchParams.q">
+      </div>
+      <div class="col-2">
+        <button class="form-control btn-primary" (click)="searchBtnClickHandler()">Search</button>
+      </div>
+    </div>
+  </form>
+  <div class="text-right mt-3 text-info">
+    <a style="cursor: pointer; " (click)="advanceSearchClickHandler()"> Advance Search</a>
+  </div>
+</div>
+
+<div *ngIf="showAdvanceSearch === true">
+  <div class="card card-body my-3">
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-fromdate">fromdate</label>
+        <input class="form-control" id="param-fromdate" type="date" name="fromdate" [(ngModel)]="searchParams.fromdate">
+      </div>
+      <div class="col">
+        <label for="param-todate">todate</label>
+        <input class="form-control" id="param-todate" type="date" name="todate" [(ngModel)]="searchParams.todate">
+      </div>
+      <div class="col">
+        <label for="param-order">order</label>
+        <div>
+          <select [(ngModel)]="searchParams.order" name="order" id="param-order" class="form-control">
+            <option>desc</option>
+            <option>asc</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-min">min</label>
+        <input [(ngModel)]="searchParams.min" class="form-control" id="param-min" type="text" name="min">
+      </div>
+
+      <div class="col">
+        <label for="param-views">max</label>
+        <input [(ngModel)]="searchParams.max" class="form-control" id="param-max" type="text" name="max">
+      </div>
+      <div class="col">
+        <label for="param-views">sort</label>
+        <select [(ngModel)]="searchParams.sort" class="form-control" name="sort" id="param-sort">
+          <option>activity</option>
+          <option>votes</option>
+          <option>creation</option>
+          <option>relevance</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-accepted">accepted</label>
+        <select [(ngModel)]="searchParams.accepted" name="accepted" id="param-accepted" class="form-control">
+          <option></option>
+          <option>True</option>
+          <option>False</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="param-answers">answers</label>
+        <input [(ngModel)]="searchParams.answers" class="form-control" id="param-answers" type="text" name="answers">
+      </div>
+      <div class="col">
+        <label for="param-closed">closed</label>
+        <select [(ngModel)]="searchParams.closed" name="closed" id="param-closed" class="form-control">
+          <option></option>
+          <option>True</option>
+          <option>False</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-body">body</label>
+        <input [(ngModel)]="searchParams.body" class="form-control" id="param-body" type="text" name="body">
+      </div>
+      <div class="col">
+        <label for="param-migrated">migrated</label>
+        <select [(ngModel)]="searchParams.migrated" name="migrated" id="param-migrated" class="form-control">
+          <option></option>
+          <option>True</option>
+          <option>False</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="param-notice">notice</label>
+        <select [(ngModel)]="searchParams.notice" name="notice" id="param-notice" class="form-control">
+          <option></option>
+          <option>True</option>
+          <option>False</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-nottagged">nottagged</label>
+        <input [(ngModel)]="searchParams.nottagged" class="form-control" id="param-nottagged" type="text"
+          name="nottagged">
+      </div>
+      <div class="col">
+        <label for="param-tagged">tagged</label>
+        <input [(ngModel)]="searchParams.tagged" class="form-control" id="param-tagged" type="text" name="tagged">
+      </div>
+      <div class="col">
+        <label for="param-title">title</label>
+        <input [(ngModel)]="searchParams.title" class="form-control" id="param-title" type="text" name="title">
+      </div>
+    </div>
+
+    <div class="form-row mb-2">
+      <div class="col">
+        <label for="param-user">user</label>
+        <input [(ngModel)]="searchParams.user" class="form-control" id="param-user" type="text" name="user">
+      </div>
+      <div class="col">
+        <label for="param-url">url</label>
+        <input [(ngModel)]="searchParams.url" class="form-control" id="param-url" type="text" name="url">
+      </div>
+      <div class="col">
+        <label for="param-views">views</label>
+        <input [(ngModel)]="searchParams.views" class="form-control" id="param-views" type="text" name="views">
+      </div>
+    </div>
+
+    <label for="param-wiki">wiki</label>
+    <select [(ngModel)]="searchParams.wiki" name="wiki" id="param-wiki" class="form-control">
+      <option></option>
+      <option>True</option>
+      <option>False</option>
+    </select>
+
+  </div>
+</div>

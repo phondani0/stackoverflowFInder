@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>StackoverflowFinder</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <app-root></app-root>
+  <!-- <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+  <script type='text/javascript'>
+    // For simplicity, we're using jQuery for some things
+    //   However, the library has no jQuery dependency
+    // Initialize library
+    SE.init({
+      // Parameters obtained by registering an app, these are specific to the SE
+      //   documentation site
+      clientId: 1,
+      key: 'U4DMV*8nvpm3EOpvf69Rxw((',
+      // Used for cross domain communication, it will be validated
+      channelUrl: 'localhost:4200/channel',
+      // Called when all initialization is finished
+      complete: function (data) {
+        console.log('complete')
+        // $('#login-button')
+        //   .removeAttr('disabled')
+        //   .text('Run Example With Version ' + data.version);
+      }
+    });
+
+    // Make the authentication call, note that being in an onclick handler
+    //   is important; most browsers will hide windows opened without a
+    //   'click blessing'
+    SE.authenticate({
+      success: function (data) {
+        alert(
+          'User Authorized with account id = ' +
+          data.networkUsers[0].account_id + ', got access token = ' +
+          data.accessToken
+        );
+      },
+      error: function (data) {
+        alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage);
+      },
+      networkUsers: true
+    });
+
+  </script> -->
+</body>
+
+</html>

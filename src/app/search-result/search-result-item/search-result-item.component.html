@@ -1,0 +1,37 @@
+<div class="my-4">
+  <div class="row">
+    <div class="col-3">
+      <div class="d-flex flex-column text-center">
+        <span class="font-weight-bold">{{data.score}}</span>
+        <span class="small">votes</span>
+      </div>
+
+      <div class="answers d-flex justify-content-center">
+        <div class="bg-success d-flex flex-column text-white text-center px-1">
+          <span class="font-weight-bold">{{data.answer_count}}</span>
+          <span class="small">answers</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="question_link">
+        <a [href]="data.link">{{data.title}}</a>
+      </div>
+      <div class="question_text">
+
+      </div>
+      <div class="bottom_sec">
+        <div class="tags">
+          <span class="badge bg-info text-white mr-2" *ngFor="let tag of data.tags">{{tag}}</span>
+        </div>
+        <div class="about text-right mt-2">
+          <span class="date"> <small class="small"> asked </small>
+            {{data.creation_date * 1000 | date:'mediumDate'}}</span>
+          <span class="owner"> <span class="small"> &nbsp;by
+            </span> <a [href]="data.owner.link">{{data.owner.display_name}}</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
