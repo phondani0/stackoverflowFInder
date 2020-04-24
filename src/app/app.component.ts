@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 export class AppComponent {
 
   searchResult: any;
+  params: any;
 
   @ViewChild('search') search: SearchComponent;
 
@@ -18,7 +19,6 @@ export class AppComponent {
     public api: ApiService
   ) {
   }
-
 
   getQuestions(params) {
     this.api.getQuestions(params).subscribe((res) => {
@@ -30,7 +30,16 @@ export class AppComponent {
 
   searchHandler(params) {
     console.log(params);
+    this.params = params;
     this.getQuestions(params);
+  }
+
+  pageChanged(e) {
+    console.log(e.page);
+    if (this.searchResult.has_more === true) {
+      this.params.page = e.page;
+      this.getQuestions(this.params);
+    }
   }
 }
 

@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 interface SearchParams {
   q?: string,
+  page?: number,
+  pageSize?: number,
   fromdate?: number,
   todate?: number,
   order?: string,
@@ -55,6 +57,7 @@ export class SearchComponent implements OnInit {
       this.searchParams.todate = toDate;
 
     console.log(fromDate, toDate);
+    this.searchParams.pageSize = 20;
     this.search.emit(this.searchParams);
   }
 

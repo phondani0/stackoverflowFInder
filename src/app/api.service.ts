@@ -15,6 +15,6 @@ export class ApiService {
   ) { }
 
   getQuestions(params): Observable<any> {
-    return this.http.get(`${this.apiUrl}/search/advanced?site=stackoverflow`, { params })
+    return this.http.get(`${this.apiUrl}/search/advanced?site=stackoverflow&filter=!9Z(-x-Q)8`, { params })
   }
 }

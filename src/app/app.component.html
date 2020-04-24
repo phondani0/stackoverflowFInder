@@ -6,6 +6,6 @@
 
   <app-search #search (search)="searchHandler($event)"></app-search>
 
-  <app-search-result [searchResult]="searchResult"></app-search-result>
+  <app-search-result (pageChanged)="pageChanged($event)" [searchResult]="searchResult"></app-search-result>
 
 </section>

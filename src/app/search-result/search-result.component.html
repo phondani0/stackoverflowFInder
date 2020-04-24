@@ -1,3 +1,9 @@
 <div *ngFor="let item of searchResult?.items">
   <app-search-result-item [data]="item"></app-search-result-item>
 </div>
+
+<div *ngIf="searchResult?.items?.length > 0">
+  <ngb-pagination (pageChange)="pageChange($event)" [collectionSize]="searchResult?.total" [(page)]="page"
+    [maxSize]="15" [boundaryLinks]="true">
+  </ngb-pagination>
+</div>
